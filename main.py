@@ -105,16 +105,19 @@ for article in articles_data:
     print("\nSpanish:", article["title"])
     print("English:", english)
 
-
-# SAVE JSON
-with open("output.json", "w", encoding="utf-8") as f:
-    json.dump(articles_data, f, indent=2, ensure_ascii=False)
-
-
 # ANALYSIS
 result = analyze_titles(articles_data)
 
 print("\nRepeated Words (>2 times):")
 print(result)
 
+# SAVE JSON
+final_output = {
+    "articles": articles_data,
+    "repeated_words": result
+}
+
+with open("output.json", "w", encoding="utf-8") as f:
+    json.dump(final_output, f, indent=2, ensure_ascii=False)
+    
 close_driver()
