@@ -17,7 +17,6 @@ This project automates the following workflow:
 - 🧪 Performs cross-browser testing using BrowserStack
 - 💾 Stores the final results in `output.json`
 
-
 ## ✨ Workflow
 
 ```text
@@ -55,6 +54,7 @@ This project automates the following workflow:
 ```
 
 ## 🛠️ Tech Stack
+
 - **Python**
 - **Selenium WebDriver**
 - **BeautifulSoup4**
@@ -62,6 +62,7 @@ This project automates the following workflow:
 - **BrowserStack** — cross-browser testing
 
 ## ✅ Requirements Checklist
+
 - [x] Visit El País with Spanish content
 - [x] Scrape first 5 Opinion articles (title + content)
 - [x] Download cover images
@@ -72,13 +73,26 @@ This project automates the following workflow:
 - [x] Cross-browser/device coverage: Chrome, Firefox, Edge, Safari, and a real iOS device
 
 ## 📄 Sample Output
+
 ```json
 {
-  "url": "https://elpais.com/opinion/...",
-  "title": "El giro de Colombia",
-  "content": "Abelardo de la Espriella asume la presidencia...",
-  "image": "https://imagenes.elpais.com/...",
-  "translated_title": "The turn of Colombia"
+  "articles": [
+    {
+      "url": "https://elpais.com/opinion/2026-08-09/el-eclipse-de-todos.html",
+      "title": "El eclipse de todos",
+      "content": "La mayor cita astronómica en décadas unirá al país...",
+      "image": "https://imagenes.elpais.com/resizer/v2/2ZVPD2G52JHUVEXBH2DJ272ZYQ.jpg?auth=416a7afb535ea520fb6ad1ff64ba2980b6d205fd5eecb21fd07c292dcb1d1c39&width=414",
+      "translated_title": "everyone's eclipse"
+    },
+    {
+      "url": "https://elpais.com/opinion/2026-08-09/la-democracia-comienza-donde-termina-el-enemigo.html",
+      "title": "La democracia comienza donde termina el enemigo",
+      "content": "La democracia no elimina los conflictos, los transforma...",
+      "image": "https://imagenes.elpais.com/resizer/v2/YNYXLAZOCJATDIDWP5VE3V5GMA.jpg?auth=b3105c2bdc2a6044891886035d630198aaecc937315cdb6e238cc340d41ce6fe&width=414",
+      "translated_title": "Democracy begins where the enemy ends"
+    }
+  ],
+  "repeated_words": {}
 }
 ```
 
